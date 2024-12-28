@@ -7,7 +7,7 @@ import { Auth } from "../stores/auth.store";
 const NavBar = () => {
   const handleUserLogOut = () => {
     Cookies.remove("token");
-    window.location.href = "http://localhost:5174/login";
+    window.location.replace = "/login";
   };
 
   const { admin } = useContext(Auth);
