@@ -15,7 +15,7 @@ function App() {
       <Router>
         <AuthProvide >
           <Routes>
-            <Route path="/" element={<CourseManage />}/>
+            <Route path="/" element={<Course />}/>
             <Route path="/course_manage" element={<Course />}>
               <Route path="/course_manage" element={<CourseManage />}/>
               <Route path="section" element={<SectionManage />} />

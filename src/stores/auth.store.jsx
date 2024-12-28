@@ -13,7 +13,7 @@ const AuthProvide = ({ children }) => {
         await instance.get('/users/profile')
         .then((res) => {
           setAdmin(res?.data?.data?.user)
-          navigate('/course_manage')
+          navigate('/')
         })
         .catch(err => navigate('/login') )
     }

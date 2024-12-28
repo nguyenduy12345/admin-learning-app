@@ -12,7 +12,7 @@ const Login = () => {
   const { admin } = useContext(Auth);
   const navigate = useNavigate();
   useEffect(() => {
-    !!admin && navigate("/course_manage");
+    !!admin && navigate("/");
   }, [admin]);
   const {
     register,
@@ -29,7 +29,7 @@ const Login = () => {
       await instance.post("login", data).then((result) => {
         setMessageLogin(result?.data?.message);
         Cookies.set("token", result?.data?.data?.accessToken, {expires: 30} )
-        result?.data ? window.location.replace('/course_manage') : ''
+        result?.data ? window.location.replace('/') : ''
       });
     } catch (error) {
       setMessageLogin(error?.response?.data?.message);
