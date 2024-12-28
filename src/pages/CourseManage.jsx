@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
-import { useNavigate, Link } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 
-import CourseForm from "../components/courseForm.jsx";
+import CourseForm from "../components/CourseForm.jsx";
 import CourseEditForm from "../components/CourseEditForm.jsx";
 
 import NotificationPopup from "../components/NotificationPopup.jsx";
