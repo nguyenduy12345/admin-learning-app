@@ -20,7 +20,7 @@ const MissonForm = ({ setMissons, setIsOpen, isOpen, setMessage }) => {
         const result = await instance.post("admin/missons", { ...data });
         setMessage(result.data.message);
         setCountRequest(0);
-        setMissons((prevMissons) => [data, ...prevMissons]);
+        setMissons((prevMissons) => [{...result.data.data.misson}, ...prevMissons]);
         reset();
         setIsOpen(false);
       } catch (err) {
