@@ -1,13 +1,14 @@
 import { useContext } from "react";
-import { NavLink } from "react-router-dom";
+import { NavLink, useNavigate } from "react-router-dom";
 import Cookies from "js-cookie";
 
 import { Auth } from "../stores/auth.store";
 
 const NavBar = () => {
+  const navigate = useNavigate()
   const handleUserLogOut = () => {
     Cookies.remove("token");
-    window.location.replace("/login")
+    navigate("/login")
   };
 
   const { admin } = useContext(Auth);
