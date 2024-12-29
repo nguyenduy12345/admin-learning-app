@@ -8,7 +8,7 @@ const NavBar = () => {
   const navigate = useNavigate()
   const handleUserLogOut = () => {
     Cookies.remove("token");
-    navigate("/login")
+    window.location.replace("/login")
   };
 
   const { admin } = useContext(Auth);
