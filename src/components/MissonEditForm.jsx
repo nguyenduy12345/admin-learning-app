@@ -42,7 +42,6 @@ const MissonEditForm = ({ setMissons, currentMisson, setMisson, setMessage }) =>
         });
         setMisson(false)
         reset();
-        setIsOpen(false);
       } catch (err) {
         setMessage(() => {
           if(err?.response?.data && Array.isArray(err.response.data)){

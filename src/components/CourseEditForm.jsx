@@ -137,7 +137,7 @@ const CourseEditForm = ({ isEdit, setIsEdit, courses, setCourses, course, setMes
               <button
                 type="button"
                 onClick={() => {
-                  setIsEdit(false), setImage(null), setNameCourse('')
+                  setIsEdit(false), setImage(null)
                 }}
                 className="mr-3 bg-gray-300 text-gray-700 px-4 py-2 rounded-md hover:bg-gray-400"
               >
