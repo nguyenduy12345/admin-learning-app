@@ -1,7 +1,7 @@
 import axios from "axios";
 import Cookies from "js-cookie"
 const instance = axios.create({
-    baseURL: 'https://duylingo-app-be.cd95dznd.xyz/api/v1/',
+    baseURL: 'https://learning-app-be-sxpv.onrender.com/api/v1/',
     headers: {'Accept-Language': 'vi-vn'}
 });
 
