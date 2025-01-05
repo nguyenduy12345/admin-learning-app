@@ -128,7 +128,8 @@ const LessonManage = () => {
   return (
     <>
       {isConfirm && (
-        <div className="w-[30rem] bg-white fixed top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-20 p-6 rounded-xl border-2 border-gray-400">
+        <div className="fixed w-full h-screen flex justify-center items-center bg-[#747070] bg-opacity-80 z-20">
+          <div className="w-[30rem] bg-white z-20 p-6 rounded-xl border-2 border-gray-400">
           <label htmlFor="course_name text-xl">
             Nhập lại tên: <span className="font-bold">{lesson?.name}</span> để
             xóa
@@ -156,6 +157,7 @@ const LessonManage = () => {
               Xóa
             </button>
           </div>
+        </div>
         </div>
       )}
       <NotificationPopup message={message} setMessage={setMessage} />

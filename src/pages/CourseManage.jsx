@@ -63,13 +63,15 @@ const CourseManage = () => {
   return (
     <>
       {isConfirm && (
-        <div className="w-[30rem] bg-white fixed top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-20 p-6 rounded-xl border-2 border-gray-400">
+        <div className="fixed w-full h-screen flex justify-center items-center bg-[#747070] bg-opacity-80">
+          <div className="w-[30rem] bg-white z-20 p-6 rounded-xl border-2 border-gray-400">
           <label htmlFor="course_name text-xl">Nhập lại tên: <span className="font-bold">{course?.name}</span> để xóa</label>
           <input className="w-full py-[6px] px-[0.7rem] font-bold my-4 border-[2px] border-gray-400 rounded-sm" type="text" id="course_name" placeholder="nhập lại tên khóa học" value={confirmToDelete} onChange={(e) => setConfirmToDelete(e.target.value)} /> <br/>
           <div className="w-full flex justify-end gap-[4px]">
             <button onClick={() => setIsConfirm(false)} className="px-4 py-2 rounded-full bg-green-500 font-bold text-white hover:bg-[#20404f]">Hủy</button>
             <button onClick={() => handleHiddenCourse()} className="px-4 py-2 rounded-full bg-red-500 font-bold text-white hover:bg-[#20404f]">Xóa</button>
           </div>
+        </div>
         </div>
       )}
       <NotificationPopup message={message} setMessage={setMessage} />
